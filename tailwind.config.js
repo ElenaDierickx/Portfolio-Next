@@ -6,6 +6,9 @@ module.exports = {
             backgroundImage: {
                 pinkblue: "url('/img/background.jpg')",
             },
+            fontFamily: {
+                inter: ["Inter", "sans-serif"],
+            },
         },
     },
     plugins: [],
