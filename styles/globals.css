@@ -1,1 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+#__next {
+    @apply h-[100vh];
+}
