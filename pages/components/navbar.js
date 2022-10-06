@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 
-export default function Navbar() {
+export default function Navbar(props) {
     return (
-        <div className="w-full h-16 flex flex-row py-4 md:px-10 sm:px-5 px-3 shadow-xl items-center justify-between fixed top-0 backdrop-blur-md">
+        <div className="w-full h-16 flex flex-row py-4 md:px-10 sm:px-5 px-3 shadow-xl items-center justify-between fixed top-0 backdrop-blur-md z-20">
             <a className="font-bold text-2xl text-center transition ease-in-out hover:scale-105 duration-300" href="#home">
                 <h1>Elena Dierickx</h1>
             </a>
@@ -21,7 +21,7 @@ export default function Navbar() {
                     Contact me
                 </a>
             </div>
-            <FontAwesomeIcon className="w-7 h-7 block sm:hidden" icon={faBars} />
+            <FontAwesomeIcon className="w-7 h-7 block sm:hidden" icon={faBars} onClick={props.barsPress} />
         </div>
     );
 }

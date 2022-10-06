@@ -4,8 +4,20 @@ import Navbar from "./components/navbar";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import ContactButton from "./components/contactButton";
+import NavbarPopup from "./components/navbarPopup";
+import { useState } from "react";
 
 export default function Home() {
+    const [displayNav, setDisplayNav] = useState("hidden");
+
+    function toggleNav() {
+        if (displayNav === "hidden") {
+            setDisplayNav("block");
+        } else {
+            setDisplayNav("hidden");
+        }
+    }
+
     return (
         <div className="h-full w-full ">
             <Head>
@@ -16,7 +28,8 @@ export default function Home() {
 
             <main className="h-full w-full font-inter">
                 <div className="h-full w-full">
-                    <Navbar />
+                    <NavbarPopup displayNav={displayNav} />
+                    <Navbar barsPress={toggleNav} />
                     <div id="home" className="h-[100vh] flex flex-col justify-between bg-pinkblue bg-cover bg-center ">
                         <div className="md:mx-20 mx-10 pt-44">
                             <h2 className="lg:text-8xl lg:w-[54rem] md:w-[40rem] md:text-7xl text-6xl sm:w-[34rem] ">
