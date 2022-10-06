@@ -11,6 +11,7 @@ export default function Home() {
     const [displayNav, setDisplayNav] = useState("hidden");
 
     function toggleNav() {
+        console.log("d");
         if (displayNav === "hidden") {
             setDisplayNav("block");
         } else {
@@ -28,7 +29,7 @@ export default function Home() {
 
             <main className="h-full w-full font-inter">
                 <div className="h-full w-full">
-                    <NavbarPopup displayNav={displayNav} barsPress={toggleNav} />
+                    <NavbarPopup displayNav={displayNav} onPress={toggleNav} />
                     <Navbar barsPress={toggleNav} />
                     <Start />
                     <WhatIDo />
