@@ -5,6 +5,7 @@ module.exports = {
         extend: {
             backgroundImage: {
                 pinkblue: "url('/img/background.jpg')",
+                bluepink: "url('/img/background2.jpg')",
             },
             fontFamily: {
                 inter: ["Inter", "sans-serif"],
