@@ -28,7 +28,7 @@ export default function Home() {
 
             <main className="h-full w-full font-inter">
                 <div className="h-full w-full">
-                    <NavbarPopup displayNav={displayNav} />
+                    <NavbarPopup displayNav={displayNav} barsPress={toggleNav} />
                     <Navbar barsPress={toggleNav} />
                     <Start />
                     <WhatIDo />
