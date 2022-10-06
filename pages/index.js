@@ -26,10 +26,10 @@ export default function Home() {
                                 I create websites, mobile applications and other web solutions for your need.
                             </p>
                         </div>
-                        <div className="w-full items-center flex flex-col mb-10">
+                        <a className="w-full items-center flex flex-col mb-10" href="#what-i-do">
                             <p>More down below</p>
                             <FontAwesomeIcon className="w-4 h-4" icon={faArrowDown} />
-                        </div>
+                        </a>
                     </div>
                     <div id="what-i-do" className="h-[100vh] flex sm:flex-row flex-col sm:justify-between bg-bluepink bg-cover bg-center ">
                         <div className="md:ml-20 ml-10 sm:pt-44 pt-20 sm:w-2/4 w-3/4">
