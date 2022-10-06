@@ -17,7 +17,7 @@ export default function Home() {
             <main className="h-full w-full font-inter">
                 <div className="h-full w-full">
                     <Navbar />
-                    <div className="h-[100vh] flex flex-col justify-between bg-pinkblue bg-cover bg-center ">
+                    <div id="home" className="h-[100vh] flex flex-col justify-between bg-pinkblue bg-cover bg-center ">
                         <div className="md:mx-20 mx-10 pt-44">
                             <h2 className="lg:text-8xl lg:w-[54rem] md:w-[40rem] md:text-7xl text-6xl sm:w-[34rem] ">
                                 I create your web & mobile solutions!
@@ -31,7 +31,7 @@ export default function Home() {
                             <FontAwesomeIcon className="w-4 h-4" icon={faArrowDown} />
                         </div>
                     </div>
-                    <div className="h-[100vh] flex sm:flex-row flex-col sm:justify-between bg-bluepink bg-cover bg-center ">
+                    <div id="what-i-do" className="h-[100vh] flex sm:flex-row flex-col sm:justify-between bg-bluepink bg-cover bg-center ">
                         <div className="md:ml-20 ml-10 sm:pt-44 pt-20 sm:w-2/4 w-3/4">
                             <h3 className="font-semibold xl:text-7xl lg:text-6xl md:text-5xl text-4xl">What I do</h3>
                             <div className="pt-5 w-full xl:text-2xl lg:text-xl md:text-lg">
