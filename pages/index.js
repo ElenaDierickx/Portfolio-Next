@@ -1,11 +1,10 @@
 import Head from "next/head";
-import Image from "next/image";
 import Navbar from "./components/navbar";
-import ContactButton from "./components/contactButton";
 import NavbarPopup from "./components/navbarPopup";
 import Start from "./components/start";
 import { useState } from "react";
 import WhatIDo from "./components/whatIDo";
+import About from "./components/about";
 
 export default function Home() {
     const [displayNav, setDisplayNav] = useState("hidden");
@@ -33,6 +32,7 @@ export default function Home() {
                     <Navbar barsPress={toggleNav} />
                     <Start />
                     <WhatIDo />
+                    <About />
                 </div>
             </main>
 

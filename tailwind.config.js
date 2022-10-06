@@ -6,6 +6,7 @@ module.exports = {
             backgroundImage: {
                 pinkblue: "url('/img/background.jpg')",
                 bluepink: "url('/img/background2.jpg')",
+                guitars: "url('/img/guitars.jpg')",
             },
             fontFamily: {
                 inter: ["Inter", "sans-serif"],
