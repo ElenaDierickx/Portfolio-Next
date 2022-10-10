@@ -7,10 +7,10 @@ export default function About() {
                     <div className="md:ml-20 ml-10 sm:w-2/4 w-3/4">
                         <h5 className="font-semibold xl:text-7xl lg:text-6xl md:text-5xl text-4xl">About me</h5>
                         <p className="sm:pt-5 pt-2 w-full xl:text-2xl lg:text-xl md:text-lg">
-                            My name is Elena. I'm a student Electronics-ICT at Odisee Ghent and my specialization is Web Development. I have always
-                            been interested in computers since I was little. Growing up I chose to study Electronics. Getting more interested in
-                            programming I began studying Elektronics-ICT in high school. Here I developed my passion for Web Development. I also have
-                            a huge passion for music and play guitar and ukelele!
+                            My name is Elena. I&apos;m a student Electronics-ICT at Odisee Ghent and my specialization is Web Development. I have
+                            always been interested in computers since I was little. Growing up I chose to study Electronics. Getting more interested
+                            in programming I began studying Elektronics-ICT in high school. Here I developed my passion for Web Development. I also
+                            have a huge passion for music and play guitar and ukelele!
                         </p>
                     </div>
                 </div>

@@ -5,6 +5,8 @@ import Start from "./components/start";
 import { useState } from "react";
 import WhatIDo from "./components/whatIDo";
 import About from "./components/about";
+import Projects from "./components/projects";
+import Contact from "./components/contact";
 
 export default function Home() {
     const [displayNav, setDisplayNav] = useState("hidden");
@@ -33,6 +35,8 @@ export default function Home() {
                     <Start />
                     <WhatIDo />
                     <About />
+                    <Projects />
+                    <Contact />
                 </div>
             </main>
 
