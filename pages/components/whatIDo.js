@@ -1,5 +1,3 @@
-import PinkButton from "./pinkButton";
-
 export default function WhatIDo() {
     return (
         <div id="what-i-do" className="h-[100vh] flex flex-col bg-bluepink bg-cover bg-center ">
@@ -15,7 +13,11 @@ export default function WhatIDo() {
                         <p>Do you have a fun idea?</p>
                         <p>Contact me! I love new challenges.</p>
                     </div>
-                    <PinkButton className="mt-10" text="Contact me" />
+                    <a href="#contact">
+                        <button className="sm:py-5 sm:px-7 py-3 px-4 bg-[#E9ADB7] rounded-md text-gray-100 sm:text-2xl text-xl font-semibold transition ease-in-out hover:scale-105 duration-300 shadow-xl mt-10">
+                            Contact me
+                        </button>
+                    </a>
                 </div>
                 <div className="md:mr-20 sm:mr-10 mr-0 sm:ml-0 ml-10 pt-6 sm:w-2/4 w-3/4 sm:h-3/4 justify-end flex flex-col">
                     <h4 className="font-semibold xl:text-7xl lg:text-6xl md:text-5xl text-4xl">My workflow</h4>
