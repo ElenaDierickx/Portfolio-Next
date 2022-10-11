@@ -7,7 +7,7 @@ module.exports = {
                 pinkblue: "url('/img/background.jpg')",
                 bluepink: "url('/img/background2.jpg')",
                 guitars: "url('/img/guitars.jpg')",
-                steps: "url('/img/steps.png')",
+                steps: "url('/img/steps.svg')",
             },
             fontFamily: {
                 inter: ["Inter", "sans-serif"],

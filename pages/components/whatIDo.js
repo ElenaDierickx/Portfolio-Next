@@ -1,4 +1,4 @@
-import ContactButton from "./contactButton";
+import PinkButton from "./pinkButton";
 
 export default function WhatIDo() {
     return (
@@ -15,7 +15,7 @@ export default function WhatIDo() {
                         <p>Do you have a fun idea?</p>
                         <p>Contact me! I love new challenges.</p>
                     </div>
-                    <ContactButton className="mt-10" />
+                    <PinkButton className="mt-10" text="Contact me" />
                 </div>
                 <div className="md:mr-20 sm:mr-10 mr-0 sm:ml-0 ml-10 pt-6 sm:w-2/4 w-3/4 sm:h-3/4 justify-end flex flex-col">
                     <h4 className="font-semibold xl:text-7xl lg:text-6xl md:text-5xl text-4xl">My workflow</h4>

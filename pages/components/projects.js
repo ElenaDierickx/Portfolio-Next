@@ -8,7 +8,7 @@ export default function Projects() {
                     <h6 className="font-semibold xl:text-7xl lg:text-6xl md:text-5xl text-4xl">My work</h6>
                     <p className="sm:pt-5 pt-2 w-full xl:text-2xl lg:text-xl md:text-lg">Projects I have done.</p>
                 </div>
-                <div className="xl:w-2/4 lg:w-3/4 flex flex-col xl:items-start lg:items-center items-start md:mx-20 mx-10 ">
+                <div className="xl:w-2/4 lg:w-3/4 flex flex-col xl:items-start lg:items-center items-start md:mx-20 mx-10 mb-5">
                     <Project />
                     <Project />
                     <Project />
