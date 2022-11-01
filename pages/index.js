@@ -12,7 +12,6 @@ export default function Home() {
     const [displayNav, setDisplayNav] = useState("hidden");
 
     function toggleNav() {
-        console.log("d");
         if (displayNav === "hidden") {
             setDisplayNav("block");
         } else {

@@ -25,7 +25,7 @@ const ContactForm = () => {
             onSubmit={handleSubmit}
             method="POST"
             target="_blank"
-            className="xl:w-[52rem] lg:w-4/6 w-11/12 h-4/6 bg-white rounded-md shadow-lg p-5 flex flex-col"
+            className="xl:w-[52rem] lg:w-4/6 w-full h-4/6 bg-white rounded-md shadow-lg p-5 flex flex-col"
         >
             <div className="flex md:flex-row flex-col justify-between">
                 <input className="w-full h-10 bg-gray-100 rounded-md p-3 mr-5" placeholder="name" name="Name" id="name" type="text" required />
