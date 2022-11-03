@@ -16,7 +16,7 @@ export default function Projects() {
             <div className="flex lg:flex-row flex-col mt-40 w-full container mx-auto">
                 <div className="xl:w-2/4 lg:w-1/4 sm:mx-0 mx-5">
                     <h6 className="font-semibold xl:text-7xl lg:text-6xl md:text-5xl text-4xl">My work</h6>
-                    <p className="sm:pt-5 pt-2 w-full xl:text-2xl lg:text-xl md:text-lg">Projects I have done.</p>
+                    <p className="sm:pt-5 pt-2 w-full xl:text-2xl lg:text-xl md:text-lg">Projects I&apos;ve done.</p>
                 </div>
                 <div className="xl:w-2/4 lg:w-3/4 flex flex-col xl:items-start lg:items-center items-start mb-5 sm:mx-0 mx-5">
                     <Project title="RaaMies" descr="A site for RaaMies" img={[raamies1]} link="https://www.raamies.be/" width="w-96" />
@@ -31,7 +31,7 @@ export default function Projects() {
                         title="Eco-App"
                         descr="An app to check the eco score of a product."
                         img={[eco1, eco2, eco3, eco4]}
-                        link="https://github.com/ElenaDierickx/SpottyFind"
+                        link="https://gitlab.com/ikdoeict/louis.dhont/eco-score-app"
                         width="w-24"
                     />
                 </div>

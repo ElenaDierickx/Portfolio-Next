@@ -4,7 +4,7 @@ export default function WhatIDo() {
             <div className="basis-2/12"></div>
             <div className="basis-10/12 flex sm:flex-row flex-col sm:justify-between container mx-auto">
                 <div className="md:w-2/4 w-4/4 sm:mx-0 mx-5">
-                    <h3 className="font-semibold sm:text-7xl text-5xl">What I do</h3>
+                    <h3 className="font-semibold sm:text-7xl text-5xl">Services</h3>
                     <div className="sm:pt-5 pt-2 w-full sm:text-2xl text-lg">
                         <p>I create websites, mobile applications and more!</p>
                         <p>Need an administrator portal?</p>
