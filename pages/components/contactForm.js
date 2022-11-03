@@ -1,39 +1,44 @@
-import React, { useState } from "react";
-
-const FORM_ENDPOINT = "https://public.herotofu.com/v1/e252cf60-279d-11ed-9d54-c9f9d2b00e7b";
+import emailjs from "@emailjs/browser";
+import React, { useRef, useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
 const ContactForm = () => {
-    const [submitted, setSubmitted] = useState(false);
-    const handleSubmit = () => {
-        setTimeout(() => {
-            setSubmitted(true);
-        }, 100);
-    };
+    const [button, setButton] = useState(true);
+    const [failMessage, setFailMessage] = useState(null);
+    const [succesMessage, setSuccesMessage] = useState(null);
+    const form = useRef();
 
-    if (submitted) {
-        return (
-            <div className="xl:w-[52rem] lg:w-4/6 w-11/12 h-4/6 bg-white rounded-md shadow-lg p-5 flex flex-col">
-                <p className="text-2xl font-semibold">Thank you!</p>
-                <p className="text-md">I&apos;ll be in touch soon.</p>
-            </div>
+    const sendEmail = (e) => {
+        e.preventDefault();
+        setButton(false);
+
+        emailjs.sendForm("service_kw4rq1u", "template_eek4q5q", form.current, "az8n4s_bBDLpA67dy").then(
+            (result) => {
+                setSuccesMessage("Thanks for your message! I'll answer as soon as possible");
+                setFailMessage(null);
+            },
+            (error) => {
+                setButton(true);
+                setFailMessage("Something went wrong, please try again");
+            }
         );
-    }
+    };
 
     return (
         <form
-            action={FORM_ENDPOINT}
-            onSubmit={handleSubmit}
+            ref={form}
+            onSubmit={sendEmail}
             method="POST"
-            target="_blank"
             className="xl:w-[52rem] lg:w-4/6 w-full h-4/6 bg-white rounded-md shadow-lg p-5 flex flex-col"
         >
             <div className="flex md:flex-row flex-col justify-between">
-                <input className="w-full h-10 bg-gray-100 rounded-md p-3 mr-5" placeholder="name" name="Name" id="name" type="text" required />
+                <input className="w-full h-10 bg-gray-100 rounded-md p-3 mr-5" placeholder="name" name="name" id="name" type="text" required />
                 <input
                     className="w-full h-10 bg-gray-100 rounded-md p-3 md:ml-5 md:mt-0 mt-3"
                     placeholder="email"
-                    name="Email"
-                    id="email"
+                    name="mail"
+                    id="mail"
                     type="email"
                     required
                 />
@@ -45,9 +50,15 @@ const ContactForm = () => {
                 id="message"
                 required
             />
-            <button className="py-3 px-4 bg-[#2479A8] rounded-md text-gray-100 sm:text-2xl text-xl font-semibold transition ease-in-out hover:scale-105 duration-300 shadow-xl w-36 mt-3">
-                Submit
-            </button>
+            <div className="flex flex-row">
+                {succesMessage && <p className="mt-3">{succesMessage}</p>}
+                {!succesMessage && (
+                    <button className="py-3 px-4 w-fit bg-[#2479A8] rounded-md text-gray-100 sm:text-2xl text-xl font-semibold transition ease-in-out hover:scale-105 duration-300 shadow-xl mt-3">
+                        {button && "Verzenden"} {!button && <FontAwesomeIcon icon={faSpinner} className="animate-spin w-7 h-7" />}
+                    </button>
+                )}
+                {failMessage && <p className="text-red-600 mt-3 self-center ml-3">{failMessage}</p>}
+            </div>
         </form>
     );
 };

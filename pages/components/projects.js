@@ -19,6 +19,7 @@ export default function Projects() {
                     <p className="sm:pt-5 pt-2 w-full xl:text-2xl lg:text-xl md:text-lg">Projects I have done.</p>
                 </div>
                 <div className="xl:w-2/4 lg:w-3/4 flex flex-col xl:items-start lg:items-center items-start mb-5 sm:mx-0 mx-5">
+                    <Project title="RaaMies" descr="A site for RaaMies" img={[raamies1]} link="https://www.raamies.be/" width="w-96" />
                     <Project
                         title="SpottyFind"
                         descr="An app to find and create beautiful spots on a map."
@@ -33,7 +34,6 @@ export default function Projects() {
                         link="https://github.com/ElenaDierickx/SpottyFind"
                         width="w-24"
                     />
-                    <Project title="RaaMies" descr="A site for RaaMies" img={[raamies1]} link="https://www.raamies.be/" width="w-96" />
                 </div>
             </div>
         </div>

@@ -16,13 +16,28 @@ export default function Contact() {
                             <h8 className="font-semibold xl:text-5xl lg:text-3xl text-2xl">Or find me at</h8>
                             <p className="lg:text-xl text-lg">elena.dierickx@outlook.be</p>
                             <div className="flex flex-row lg:mt-3 mt-1">
-                                <a href="mailto: elena.dierickx@outlook.be" target="_blank" rel="noreferrer">
+                                <a
+                                    href="mailto: elena.dierickx@outlook.be"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="hover:text-blue-600 ease-in-out duration-300"
+                                >
                                     <FontAwesomeIcon icon={faEnvelope} className="lg:w-10 w-7" />
                                 </a>
-                                <a href="https://github.com/ElenaDierickx" target="_blank" rel="noreferrer">
+                                <a
+                                    href="https://github.com/ElenaDierickx"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="hover:text-blue-600 ease-in-out duration-300"
+                                >
                                     <FontAwesomeIcon icon={faGithub} className="lg:w-10 w-7 ml-3" />
                                 </a>
-                                <a href="https://www.linkedin.com/in/elena-dierickx" target="_blank" rel="noreferrer">
+                                <a
+                                    href="https://www.linkedin.com/in/elena-dierickx"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                    className="hover:text-blue-600 ease-in-out duration-300"
+                                >
                                     <FontAwesomeIcon icon={faLinkedin} className="lg:w-10 w-7 ml-3" />
                                 </a>
                             </div>
