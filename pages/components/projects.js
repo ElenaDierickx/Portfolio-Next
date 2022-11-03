@@ -4,6 +4,11 @@ import spotty2 from "./../../public/img/SpottyFind/SpottyFind2.png";
 import spotty3 from "./../../public/img/SpottyFind/SpottyFind3.png";
 import spotty4 from "./../../public/img/SpottyFind/SpottyFind4.png";
 import spotty5 from "./../../public/img/SpottyFind/SpottyFind5.png";
+import eco1 from "./../../public/img/Eco/Eco1.png";
+import eco2 from "./../../public/img/Eco/Eco2.png";
+import eco3 from "./../../public/img/Eco/Eco3.png";
+import eco4 from "./../../public/img/Eco/Eco4.png";
+import raamies1 from "./../../public/img/Raamies/raamies1.png";
 
 export default function Projects() {
     return (
@@ -18,9 +23,17 @@ export default function Projects() {
                         title="SpottyFind"
                         descr="An app to find and create beautiful spots on a map."
                         img={[spotty1, spotty2, spotty3, spotty4, spotty5]}
+                        link="https://play.google.com/store/apps/details?id=com.zeekoe.spottyfind"
+                        width="w-24"
                     />
-                    <Project />
-                    <Project />
+                    <Project
+                        title="Eco-App"
+                        descr="An app to check the eco score of a product."
+                        img={[eco1, eco2, eco3, eco4]}
+                        link="https://github.com/ElenaDierickx/SpottyFind"
+                        width="w-24"
+                    />
+                    <Project title="RaaMies" descr="A site for RaaMies" img={[raamies1]} link="https://www.raamies.be/" width="w-96" />
                 </div>
             </div>
         </div>
