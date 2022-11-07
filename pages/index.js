@@ -10,12 +10,21 @@ import Contact from "./components/contact";
 
 export default function Home() {
     const [displayNav, setDisplayNav] = useState("hidden");
+    const [lang, setLang] = useState("eng");
 
     function toggleNav() {
         if (displayNav === "hidden") {
             setDisplayNav("block");
         } else {
             setDisplayNav("hidden");
+        }
+    }
+
+    function togglelang() {
+        if (lang === "eng") {
+            setLang("nl");
+        } else {
+            setLang("eng");
         }
     }
 
@@ -29,13 +38,13 @@ export default function Home() {
 
             <main className="h-full w-full font-inter">
                 <div className="h-full w-full">
-                    <NavbarPopup displayNav={displayNav} onPress={toggleNav} />
-                    <Navbar barsPress={toggleNav} />
-                    <Start />
-                    <WhatIDo />
-                    <About />
-                    <Projects />
-                    <Contact />
+                    <NavbarPopup displayNav={displayNav} onPress={toggleNav} lang={lang} />
+                    <Navbar barsPress={toggleNav} togglelang={togglelang} lang={lang} />
+                    <Start lang={lang} />
+                    <WhatIDo lang={lang} />
+                    <About lang={lang} />
+                    <Projects lang={lang} />
+                    <Contact lang={lang} />
                 </div>
             </main>
 

@@ -3,7 +3,7 @@ import React, { useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 
-const ContactForm = () => {
+const ContactForm = (props) => {
     const [button, setButton] = useState(true);
     const [failMessage, setFailMessage] = useState(null);
     const [succesMessage, setSuccesMessage] = useState(null);
@@ -15,12 +15,14 @@ const ContactForm = () => {
 
         emailjs.sendForm("service_kw4rq1u", "template_eek4q5q", form.current, "az8n4s_bBDLpA67dy").then(
             (result) => {
-                setSuccesMessage("Thanks for your message! I'll answer as soon as possible");
+                if (props.lang === "eng") setSuccesMessage("Thanks for your message! I'll answer as soon as possible");
+                if (props.lang === "nl") setSuccesMessage("Bedankt voor je bericht! Ik antwoord zo snel mogelijk");
                 setFailMessage(null);
             },
             (error) => {
                 setButton(true);
-                setFailMessage("Something went wrong, please try again");
+                if (props.lang === "eng") setFailMessage("Something went wrong, please try again");
+                if (props.lang === "nl") setFailMessage("Er is iets misgelopen, probeer alstublieft opnieuw");
             }
         );
     };
@@ -33,7 +35,14 @@ const ContactForm = () => {
             className="xl:w-[52rem] lg:w-4/6 w-full h-4/6 bg-white rounded-md shadow-lg p-5 flex flex-col"
         >
             <div className="flex md:flex-row flex-col justify-between">
-                <input className="w-full h-10 bg-gray-100 rounded-md p-3 mr-5" placeholder="name" name="name" id="name" type="text" required />
+                <input
+                    className="w-full h-10 bg-gray-100 rounded-md p-3 mr-5"
+                    placeholder={(props.lang === "eng" && "name") || (props.lang === "nl" && "naam")}
+                    name="name"
+                    id="name"
+                    type="text"
+                    required
+                />
                 <input
                     className="w-full h-10 bg-gray-100 rounded-md p-3 md:ml-5 md:mt-0 mt-3"
                     placeholder="email"
@@ -45,7 +54,7 @@ const ContactForm = () => {
             </div>
             <textarea
                 className="w-full h-full bg-gray-100 rounded-md p-3 md:mt-5 mt-3 resize-none"
-                placeholder="message"
+                placeholder={(props.lang === "eng" && "message") || (props.lang === "nl" && "bericht")}
                 name="message"
                 id="message"
                 required
@@ -54,7 +63,9 @@ const ContactForm = () => {
                 {succesMessage && <p className="mt-3">{succesMessage}</p>}
                 {!succesMessage && (
                     <button className="py-3 px-4 w-fit bg-[#2479A8] rounded-md text-gray-100 sm:text-2xl text-xl font-semibold transition ease-in-out hover:scale-105 duration-300 shadow-xl mt-3">
-                        {button && "Verzenden"} {!button && <FontAwesomeIcon icon={faSpinner} className="animate-spin w-7 h-7" />}
+                        {button && props.lang === "nl" && "Verzenden"}
+                        {button && props.lang === "eng" && "Send"}
+                        {!button && <FontAwesomeIcon icon={faSpinner} className="animate-spin w-7 h-7" />}
                     </button>
                 )}
                 {failMessage && <p className="text-red-600 mt-3 self-center ml-3">{failMessage}</p>}
