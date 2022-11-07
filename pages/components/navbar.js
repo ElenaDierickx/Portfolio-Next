@@ -46,7 +46,11 @@ export default function Navbar(props) {
                     className="w-24 rounded-md shadow-lg flex flex-row py-2 bg-[#E9ADB7] relative hover:cursor-pointer mr-5"
                     onClick={props.togglelang}
                 >
-                    <div className="bg-[#2479A8] absolute w-2/4 h-full top-0 rounded-md ease-in-out delay-300 left-0 z-20" />
+                    <div
+                        className={`bg-[#2479A8] absolute w-2/4 h-full top-0 rounded-md transition ease-in-out delay-300 ${
+                            props.lang === "eng" ? "left-0" : "right-0"
+                        }`}
+                    />
                     <div className="w-1/2 flex justify-center self-center z-10">
                         <p>Eng</p>
                     </div>
