@@ -11,7 +11,7 @@ export default function About(props) {
                         </h5>
                         <p className="sm:pt-5 pt-2 w-full xl:text-2xl lg:text-xl md:text-lg">
                             {props.lang === "eng" &&
-                                "My name is Elena. I&apos;m a student Electronics-ICT at Odisee Ghent and my specialization is Web Development. Ever since I was little I&apos;ve always been interested in computers. Growing up I chose to study Electronics. Getting more interested in programming I began studying Elektronics-ICT in high school. Here I developed my passion for Web Development. I also have a huge passion for music and play the guitar and the ukelele!"}
+                                "My name is Elena. I'm a student Electronics-ICT at Odisee Ghent and my specialization is Web Development. Ever since I was little I've always been interested in computers. Growing up I chose to study Electronics. Getting more interested in programming I began studying Elektronics-ICT in high school. Here I developed my passion for Web Development. I also have a huge passion for music and play the guitar and the ukelele!"}
                             {props.lang === "nl" &&
                                 "Mijn naam is Elena. Ik ben een student Electronica-ICT op Odisee Gent en mijn specialisatie is Web Development. Sinds ik klein was ben ik al altijd geïnteresseerd in computers. In het middelbare heb ik dan gekozen om Elektronica te studeren. Hier ben ik programmeren leren kennen en ben ik Elektronica-ICT gaan studeren. Hier heb ik mijn passie voor Web Development ontwikkeld. Ik heb ook een grote passie voor muziek en speel gitaar en ukelele!"}
                         </p>
