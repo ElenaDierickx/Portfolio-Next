@@ -33,6 +33,7 @@ export default function Home() {
             <Head>
                 <title>Elena Dierickx</title>
                 <meta name="description" content="Portfolio of Elena Dierickx" />
+                <meta property="og:image" content="img/front.png" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
