@@ -38,6 +38,18 @@ export default function WhatIDo(props) {
                         </button>
                     </a>
                 </div>
+                <div className="md:w-2/4 w-4/4 sm:mx-0 mx-5 sm:mt-48 mt-5">
+                    <h3 className="font-semibold sm:text-7xl text-5xl">
+                        {props.lang === "eng" && "For business and private"}
+                        {props.lang === "nl" && "Particulier en zakelijk"}
+                    </h3>
+                    <div className="sm:pt-5 pt-2 w-full sm:text-2xl text-lg">
+                        <p>
+                            {props.lang === "eng" && "I work for business and for individuals."}
+                            {props.lang === "nl" && "Ik werk voor zaken en voor particulieren."}
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     );
