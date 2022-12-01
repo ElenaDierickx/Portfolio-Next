@@ -10,7 +10,7 @@ import Contact from "./components/contact";
 
 export default function Home() {
     const [displayNav, setDisplayNav] = useState("hidden");
-    const [lang, setLang] = useState("eng");
+    const [lang, setLang] = useState("nl");
 
     function toggleNav() {
         if (displayNav === "hidden") {

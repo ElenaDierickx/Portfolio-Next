@@ -21,7 +21,7 @@ export default function Contact(props) {
                                 {props.lang === "nl" && "Of vind me hier"}
                             </h8>
                             <p className="lg:text-xl text-lg">elena.dierickx@outlook.be</p>
-                            <div className="flex flex-row lg:mt-3 mt-1">
+                            <div className="flex flex-row lg:mt-3 mt-1 mb-3">
                                 <a
                                     href="mailto: elena.dierickx@outlook.be"
                                     target="_blank"
@@ -47,6 +47,11 @@ export default function Contact(props) {
                                     <FontAwesomeIcon icon={faLinkedin} className="lg:w-10 w-7 ml-3" />
                                 </a>
                             </div>
+                            <h9 className="font-semibold xl:text-5xl lg:text-3xl text-2xl">
+                                {props.lang === "eng" && "btw-number"}
+                                {props.lang === "nl" && "btw-nummer"}
+                            </h9>
+                            <p className="lg:text-xl text-lg">BE0793.328.356</p>
                         </div>
                     </div>
                 </div>

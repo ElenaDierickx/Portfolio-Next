@@ -23,7 +23,7 @@ export default function WhatIDo(props) {
                             {props.lang === "nl" && "Iets ingewikkelder?"}
                         </p>
                         <p>
-                            {props.lang === "eng" && "Something more complicated?"}
+                            {props.lang === "eng" && "Do you have a fun idea?"}
                             {props.lang === "nl" && "Heb je een leuk idee?"}
                         </p>
                         <p>
