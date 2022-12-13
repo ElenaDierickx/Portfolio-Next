@@ -12,8 +12,8 @@ export default function Start(props) {
         <div className="container mx-auto h-full justify-between flex flex-col">
           <div>
             <h2 className="lg:text-8xl lg:w-[54rem] md:w-[40rem] md:text-7xl text-5xl sm:w-[34rem] sm:mx-0 mx-5 animate-fadeInLeft">
-              {props.lang === "eng" && "I create your web & mobile solutions!"}
-              {props.lang === "nl" && "Ik maak jouw web & mobile oplossingen!"}
+              {props.lang === "eng" && "I design and create apps and websites!"}
+              {props.lang === "nl" && "Ik design en maak apps en websites!"}
             </h2>
             <p className="mt-8 lg:text-3xl lg:w-[40rem] md:text-2xl md:w-[30rem] sm:w-[26rem] text-xl sm:mx-0 mx-5 animate-fadeInRight">
               {props.lang === "eng" &&
